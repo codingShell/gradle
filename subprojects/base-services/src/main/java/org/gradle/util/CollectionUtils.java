@@ -184,16 +184,16 @@ public abstract class CollectionUtils {
         return destination;
     }
 
-    public static <R, I> List<R> collect(List<? extends I> list, Transformer<? extends R, ? super I> transformer) {
-        return collect(list, new ArrayList<R>(list.size()), transformer);
+    public static <R, I> Set<R> collect(Set<? extends I> set, Transformer<? extends R, ? super I> transformer) {
+        return collect(set, new HashSet<R>(set.size()), transformer);
     }
 
     public static <R, I> List<R> collect(I[] list, Transformer<? extends R, ? super I> transformer) {
         return collect(Arrays.asList(list), transformer);
     }
 
-    public static <R, I> Set<R> collect(Set<? extends I> set, Transformer<? extends R, ? super I> transformer) {
-        return collect(set, new HashSet<R>(), transformer);
+    public static <R, I> List<R> collect(Collection<? extends I> source, Transformer<? extends R, ? super I> transformer) {
+        return collect(source, new ArrayList<R>(source.size()), transformer);
     }
 
     public static <R, I> List<R> collect(Iterable<? extends I> source, Transformer<? extends R, ? super I> transformer) {
@@ -667,7 +667,7 @@ public abstract class CollectionUtils {
         return list.isEmpty() ? null : list;
     }
 
-    public static String asCommandLine(Iterable<String> arguments) {
+    public static String asCommandLine(Collection<String> arguments) {
         return Joiner.on(" ").join(collect(arguments, Transformers.asSafeCommandLineArgument()));
     }
 }

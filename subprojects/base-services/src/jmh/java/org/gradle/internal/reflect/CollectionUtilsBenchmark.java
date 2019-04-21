@@ -36,15 +36,15 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
  * Benchmark                                    (size)   Mode  Cnt         Score        Error  Units
- * CollectionUtilsBenchmark.collect_collection      10  thrpt   20  17594714.598 ±  93418.600  ops/s
- * CollectionUtilsBenchmark.collect_collection     100  thrpt   20   1879849.351 ±  81698.302  ops/s
- * CollectionUtilsBenchmark.collect_collection    1000  thrpt   20    194278.105 ±   5444.248  ops/s
- * CollectionUtilsBenchmark.collect_iterable        10  thrpt   20  17400146.689 ± 159109.940  ops/s
- * CollectionUtilsBenchmark.collect_iterable       100  thrpt   20   2044732.571 ±  22123.885  ops/s
- * CollectionUtilsBenchmark.collect_iterable      1000  thrpt   20    206728.343 ±   2648.332  ops/s
- * CollectionUtilsBenchmark.collect_set             10  thrpt   20   9334146.882 ±  52347.921  ops/s
- * CollectionUtilsBenchmark.collect_set            100  thrpt   20    585551.459 ±  15429.135  ops/s
- * CollectionUtilsBenchmark.collect_set           1000  thrpt   20     62993.322 ±   1863.450  ops/s
+ * CollectionUtilsBenchmark.collect_collection      10  thrpt   20  25044591.599 ± 470130.788  ops/s
+ * CollectionUtilsBenchmark.collect_collection     100  thrpt   20   2874923.581 ±  40558.137  ops/s
+ * CollectionUtilsBenchmark.collect_collection    1000  thrpt   20    295896.916 ±   1213.754  ops/s
+ * CollectionUtilsBenchmark.collect_iterable        10  thrpt   20  17647067.697 ± 385483.786  ops/s
+ * CollectionUtilsBenchmark.collect_iterable       100  thrpt   20   2058919.036 ±  28507.690  ops/s
+ * CollectionUtilsBenchmark.collect_iterable      1000  thrpt   20    208554.590 ±   1459.872  ops/s
+ * CollectionUtilsBenchmark.collect_set             10  thrpt   20   9243910.992 ± 104211.609  ops/s
+ * CollectionUtilsBenchmark.collect_set            100  thrpt   20    692530.109 ±  19110.223  ops/s
+ * CollectionUtilsBenchmark.collect_set           1000  thrpt   20     71080.103 ±   2151.557  ops/s
  **/
 @Fork(2)
 @State(Scope.Benchmark)
