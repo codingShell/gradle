@@ -48,6 +48,7 @@ class GradleInceptionPerformanceTest extends AbstractCrossVersionPerformanceTest
         ["-Djava9Home=${System.getProperty('java9Home')}",
          "-D${PLUGIN_PORTAL_OVERRIDE_URL_PROPERTY}=${gradlePluginRepositoryMirrorUrl()}",
          "-Dorg.gradle.ignoreBuildJavaVersionCheck=true",
+         "-PbuildSrcCheck=false",
          "-I", createMirrorInitScript().absolutePath]
     }
 
@@ -82,7 +83,7 @@ class GradleInceptionPerformanceTest extends AbstractCrossVersionPerformanceTest
         runner.testProject = testProject
         runner.tasksToRun = ['help']
         runner.runs = runs
-        runner.args = extraGradleBuildArguments() + ["-PbuildSrcCheck=false"]
+        runner.args = extraGradleBuildArguments()
 
         and:
         def changingClassFilePath = "buildSrc/${buildSrcProjectDir}src/main/groovy/ChangingClass.groovy"
